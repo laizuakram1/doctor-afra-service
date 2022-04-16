@@ -1,0 +1,40 @@
+[
+    {
+        "id":1,
+        "image":
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    },
+    {
+        "id":2,
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    },
+    {
+        "id":3,
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    },
+    {
+        "id":4,
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    },
+    {
+        "id":5,
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    },
+    {
+        "id":6,
+        "image":
+        "name":"Consultation",
+        "price":300,
+        "description":"I hope my first consultation is very workable for your disease. Every time I think and try a better consultancy for my patient. Consultancy is first part of tretment for any patient"
+    }
+]

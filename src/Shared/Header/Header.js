@@ -6,19 +6,19 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <Navbar bg="light" variant="light">
-    <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="navLink ms-auto">
-      <Link to='/home'>Home</Link>
-      <Link to='/services'>Services</Link>
-      <Link to='/blogs'>Blogs</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/login'>Login</Link>
-     
-    </Nav>
-    </Container>
-  </Navbar>
+            <Navbar fixed='top' bg="light" variant="light">
+                <Container>
+                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Nav className="navLink ms-auto">
+                        <Link to='/home'>Home</Link>
+                        <Link to='/services'>Services</Link>
+                        <Link to='/blogs'>Blogs</Link>
+                        <Link to='/about'>About</Link>
+                        <Link to='/login'>Login</Link>
+
+                    </Nav>
+                </Container>
+            </Navbar>
         </div>
     );
 };
