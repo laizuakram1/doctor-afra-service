@@ -1,0 +1,9 @@
+.services-title{
+    text-align: center;
+    margin-bottom:30px;
+}
+.service-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
