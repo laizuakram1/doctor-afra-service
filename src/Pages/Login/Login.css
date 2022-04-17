@@ -23,3 +23,11 @@
     text-decoration: none;
     margin-left:5px;
 }
+.orLine{
+    border:1px solid blue;
+    width:50%;
+    height:1px;
+    margin-top: 10px;
+
+}
+
