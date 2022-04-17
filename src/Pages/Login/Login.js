@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+
+
 
 import SocialLink from '../../Shared/SocialLink/SocialLink';
+import auth from '../../firebase.init';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -11,9 +15,11 @@ const Login = () => {
     const [error, setError] = useState('');
     console.log(email, password);
 
+    const [signInWithEmailAndPassword,user] = useSignInWithEmailAndPassword(auth);
+
+
     const handleEmailBlur = event =>{
         setEmail(event.target.value);
-    
     }
     
     const handlePasswordBlur = event =>{
@@ -22,6 +28,8 @@ const Login = () => {
     
     const handleCreateUser = (event)=>{
         event.preventDefault();
+
+        signInWithEmailAndPassword(email, password);
     }
     return (
         <div className='form-container'>
