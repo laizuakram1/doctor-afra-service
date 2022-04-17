@@ -11,6 +11,7 @@ import Slider from './Pages/Home/Slider/Slider';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SingUp/SignUp';
 import Header from './Shared/Header/Header';
+import NotFound from './Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
