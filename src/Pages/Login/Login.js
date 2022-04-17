@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
@@ -15,9 +15,16 @@ const Login = () => {
     const [error, setError] = useState('');
     
 
-    const [signInWithEmailAndPassword,user] = useSignInWithEmailAndPassword(auth);
-    if(user){
+    
 
+    const [signInWithEmailAndPassword,user] = useSignInWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/';
+    
+    if(user){
+        navigate(from, {replace:true});
     }
 
 
