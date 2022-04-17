@@ -10,6 +10,7 @@ import Services from './Pages/Home/Sevices/Services';
 import Slider from './Pages/Home/Slider/Slider';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SingUp/SignUp';
+import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 import NotFound from './Shared/NotFound/NotFound';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

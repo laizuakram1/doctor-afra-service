@@ -1,0 +1,39 @@
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top:20px;
+    color: black;
+    height:40px;
+    align-items: center;
+    
+}
+
+.contact p {
+    line-height: 15px;
+    font-size: 14px;
+}
+
+.contact-info {
+    box-shadow: 5px 3px 15px 5px rgb(234, 232, 232);
+    width: 430px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.appointment {
+    background-color: skyblue;
+    padding: 50px;
+    border-radius: 5px;
+
+}
+
+.input-group {
+    margin-top: 20px;
+
+}
