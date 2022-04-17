@@ -13,9 +13,12 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    console.log(email, password);
+    
 
     const [signInWithEmailAndPassword,user] = useSignInWithEmailAndPassword(auth);
+    if(user){
+
+    }
 
 
     const handleEmailBlur = event =>{
