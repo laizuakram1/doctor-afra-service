@@ -56,7 +56,7 @@ const Footer = () => {
                             <FormControl as="textarea" aria-label="With textarea" placeholder='Message' />
                         </InputGroup>
                     </div>
-                   <button className='btn btn-dark mt-3'>Submit</button>
+                   <button className='footer-submit-btn btn btn-dark mt-3'>Submit</button>
                 </div>
             </div>
             

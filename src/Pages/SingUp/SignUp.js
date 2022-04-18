@@ -10,6 +10,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 const SignUp = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const confirmPasswordRef = useRef('');
     const [error, setError] = useState('');
 
     const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
@@ -19,10 +20,19 @@ const SignUp = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+        const confirmPassword = confirmPasswordRef.current.value;
 
 
         createUserWithEmailAndPassword(email, password);
-        
+        if(!email){
+            setError('please type email');
+        }
+        else if(password !== confirmPassword){
+            setError(`don't match you two password`);
+        }
+        else if(!password){
+            setError('please type password');
+        }
         if(password.length < 6){
             setError('password must 6 digit or more');
         }
@@ -42,7 +52,7 @@ const SignUp = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
 
-                    <Form.Control type="password" placeholder="Confirm Password" />
+                    <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" />
                 </Form.Group>
                     <p className='text-danger'>{error}</p>
                 <Button variant="dark" type="submit">

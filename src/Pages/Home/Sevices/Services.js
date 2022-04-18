@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../../../Shared/Footer/Footer';
 import Servic from '../Servic/Servic';
 import './Services.css';
 
@@ -23,7 +24,7 @@ const Services = () => {
                 }
             </div>
 
-
+                <Footer></Footer>
         </div>
     );
 };

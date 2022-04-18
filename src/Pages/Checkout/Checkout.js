@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import CheckoutList from '../CheckoutList/CheckoutList';
 import './Checkout.css';
 
@@ -18,6 +19,7 @@ const Checkout = () => {
                         service={service}
                     ></CheckoutList>)
                 }
+                <Footer></Footer>
         </div>
     );
 };

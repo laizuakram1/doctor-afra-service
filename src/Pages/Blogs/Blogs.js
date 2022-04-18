@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import './Blogs.css';
 
 const Blogs = () => {
@@ -32,6 +33,7 @@ const Blogs = () => {
                 </h4>
                 <p>Ans: Firebase obviously provide some extra facilities other then authentication system. First of all I impresed to firebase for firebase hooks. Firebase hooks is a very useable and smart technique without time lost. Then firebase porvide hoisting that will help you to host your local project instant without any hassel.Moreover firebase porvide popular user login and register authenticatin system. Not only for this service Firebase provide AI (Artificial Intelligence) Matchine leearning base app development environment.</p>
             </blockquote>
+            <Footer></Footer>
         </div>
     );
 };

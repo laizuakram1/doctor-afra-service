@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../Shared/Footer/Footer';
 import Services from '../Sevices/Services';
 import Slider from '../Slider/Slider';
 
@@ -8,8 +9,9 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Services></Services>
+            
         </div>
     );
 };
 
-export default Home; <h2>Welcome to Dr afra</h2>
+export default Home;

@@ -37,3 +37,12 @@
     margin-top: 20px;
 
 }
+.footer-submit-btn{
+    border:none;
+    transition:all 0.3s;
+}
+.footer-submit-btn:hover{
+    background-color: white;
+    color:black;
+    border:none;
+}
