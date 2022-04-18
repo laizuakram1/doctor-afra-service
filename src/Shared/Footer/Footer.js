@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import React from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
 import './Footer.css';
@@ -55,6 +56,7 @@ const Footer = () => {
                             <FormControl as="textarea" aria-label="With textarea" placeholder='Message' />
                         </InputGroup>
                     </div>
+                   <button className='btn btn-dark mt-3'>Submit</button>
                 </div>
             </div>
             
