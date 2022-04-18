@@ -1,0 +1,22 @@
+.checkList{
+    display:flex;
+    text-align: center;
+    width:400px;
+    justify-content:space-around;
+    align-items: center;
+    margin:auto;
+    margin-bottom:40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(228, 227, 227);;
+
+}
+.checkList img{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    margin-right:15px;
+    display:inline;
+}
+.checkList span{
+    margin-right:10px;
+}

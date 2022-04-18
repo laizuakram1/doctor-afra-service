@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import CheckoutList from '../CheckoutList/CheckoutList';
+import './Checkout.css';
 
 const Checkout = () => {
+    const [services, setService] = useState([]);
+
+    useEffect(() => {
+        fetch('services.json')
+            .then(res => res.json())
+            .then(data => setService(data));
+    }, [])
     return (
-        <div className='container'>
-            <h3 className='text-primary text-center mt-5'>Lets checkout here</h3>
+        <div className='container checklist-container'>
+             {
+                    services.map(service => <CheckoutList
+                        key={service.id}
+                        service={service}
+                    ></CheckoutList>)
+                }
         </div>
     );
 };
