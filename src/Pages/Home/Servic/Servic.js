@@ -21,7 +21,7 @@ const Servic = ({ service }) => {
                     <Card.Text>
                         {description.slice(0,80)}
                     </Card.Text>
-                    <Button onClick={NavigateCheckout} variant="info">Get Appointment</Button>
+                    <Button onClick={NavigateCheckout} variant="info">Checkout</Button>
                 </Card.Body>
             </Card>
         </div>

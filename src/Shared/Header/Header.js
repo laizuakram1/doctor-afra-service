@@ -21,6 +21,7 @@ const Header = () => {
                         <Link to='/home'>Home</Link>
                         <Link to='/services'>Services</Link>
                         <Link to='/blogs'>Blogs</Link>
+                        <Link to='/checkout'>Checkout</Link>
                         <Link to='/about'>About</Link>
                         {
                             user ?
