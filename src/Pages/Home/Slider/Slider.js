@@ -2,6 +2,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/Banner/banner1.jpg';
+import banner4 from '../../../images/Banner/banner4.jpg';
+import banner3 from '../../../images/Banner/banner3.jpg';
 
 const Slider = () => {
     return (
@@ -21,7 +23,7 @@ const Slider = () => {
                 <Carousel.Item interval={500}>
                     <img style={{ height: '650px' }}
                         className="d-block w-100"
-                        src={banner1}
+                        src={banner4}
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -32,7 +34,7 @@ const Slider = () => {
                 <Carousel.Item>
                     <img style={{ height: '650px' }}
                         className="d-block w-100"
-                        src={banner1}
+                        src={banner3}
                         alt="Third slide"
                     />
                     <Carousel.Caption>

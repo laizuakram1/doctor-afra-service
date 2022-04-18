@@ -21,11 +21,13 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    
     let from = location.state?.from?.pathname || '/';
     
     if(user){
         navigate(from, {replace:true});
     }
+   
 
 
     const handleEmailBlur = event =>{
@@ -40,6 +42,9 @@ const Login = () => {
         event.preventDefault();
 
         signInWithEmailAndPassword(email, password);
+        if(password.length < 6){
+            setError('password must 6 digit or more');
+        }
     }
     return (
         <div className='form-container'>
@@ -53,10 +58,8 @@ const Login = () => {
 
                     <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                    <p className='text-danger'>{error}</p>
+                <Button variant="dark" type="submit">
                     Login
                 </Button>
                 <p className='form-toggle'>Don't have an account?<Link to='/signUp'>SignUp</Link></p>

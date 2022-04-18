@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -9,17 +9,23 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 const SignUp = () => {
     const emailRef = useRef('');
-const passwordRef = useRef('');
+    const passwordRef = useRef('');
+    const [error, setError] = useState('');
 
     const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
 
 
-    const handleLoginForm = event =>{
+    const handleLoginForm = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
+
         createUserWithEmailAndPassword(email, password);
+        
+        if(password.length < 6){
+            setError('password must 6 digit or more');
+        }
 
     }
 
@@ -38,10 +44,8 @@ const passwordRef = useRef('');
 
                     <Form.Control type="password" placeholder="Confirm Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                    <p className='text-danger'>{error}</p>
+                <Button variant="dark" type="submit">
                     SignUp
                 </Button>
                 <p className='form-toggle'>Already have an account?<Link to='/login'>Login</Link></p>

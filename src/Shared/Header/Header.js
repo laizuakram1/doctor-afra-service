@@ -14,9 +14,9 @@ const Header = () => {
       };
     return (
         <div>
-            <Navbar fixed='top' bg="light" variant="light">
+            <Navbar fixed='top' bg="info" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">Dr Afra</Navbar.Brand>
+                <Link className='nav-title' to='/home'>Dr Afra</Link>
                     <Nav className="navLink ms-auto">
                         <Link to='/home'>Home</Link>
                         <Link to='/services'>Services</Link>
@@ -24,7 +24,7 @@ const Header = () => {
                         <Link to='/about'>About</Link>
                         {
                             user ?
-                            <Button onClick={logout}>SignOut</Button>
+                            <Button className='logut-btn' onClick={logout}>SignOut</Button>
                             :
                             <Link to='/login'>Login</Link>
                        

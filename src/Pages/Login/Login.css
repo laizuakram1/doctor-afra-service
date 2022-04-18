@@ -18,13 +18,15 @@
 .form-toggle{
     margin-top:10px;
     font-size: 14px;
+    
 }
 .form-toggle a{
     text-decoration: none;
     margin-left:5px;
+    
 }
 .orLine{
-    border:1px solid blue;
+    border:1px solid gray;
     width:50%;
     height:1px;
     margin-top: 10px;
